@@ -1,0 +1,58 @@
+[
+    {
+        "Name": "Customer 1",
+        "CustomerTypeId": 1,
+        "PhoneNumber": "+905554441232",
+        "Email": "customer1@email.com",
+        "CreatedAt": "2022-04-23T12:00:00.714942+03:00"
+    },
+    {
+        "Name": "Customer 2",
+        "CustomerTypeId": 2,
+        "PhoneNumber": "+905554441232",
+        "Email": "customer2@email.com",
+        "CreatedAt": "2022-04-23T12:00:00.714942+03:00"
+    },
+    {
+        "Name": "Customer 3",
+        "CustomerTypeId": 3,
+        "PhoneNumber": "+905554441232",
+        "Email": "customer3@email.com",
+        "CreatedAt": "2022-04-23T12:00:00.714942+03:00"
+    },
+    {
+        "Name": "Customer 4",
+        "CustomerTypeId": 3,
+        "PhoneNumber": "+905554441232",
+        "Email": "customer4@email.com",
+        "CreatedAt": "2022-04-23T12:00:00.714942+03:00"
+    },
+    {
+        "Name": "Customer 5",
+        "CustomerTypeId": 1,
+        "PhoneNumber": "+905554441232",
+        "Email": "customer5@email.com",
+        "CreatedAt": "2022-04-23T12:00:00.714942+03:00"
+    },
+    {
+        "Name": "Customer 6",
+        "CustomerTypeId": 2,
+        "PhoneNumber": "+905554441232",
+        "Email": "customer7@email.com",
+        "CreatedAt": "2022-04-23T12:00:00.714942+03:00"
+    },
+    {
+        "Name": "Customer 8",
+        "CustomerTypeId": 1,
+        "PhoneNumber": "+905554441232",
+        "Email": "customer1@email.com",
+        "CreatedAt": "2022-04-23T12:00:00.714942+03:00"
+    },
+    {
+        "Name": "Customer 9",
+        "CustomerTypeId": 4,
+        "PhoneNumber": "+905554441232",
+        "Email": "customer1@email.com",
+        "CreatedAt": "2022-04-23T12:00:00.714942+03:00"
+    }
+]

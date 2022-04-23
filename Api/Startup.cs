@@ -1,4 +1,6 @@
+using Domain.RepositoryInterfaces;
 using Infrastructure.Data;
+using Infrastructure.Data.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 
@@ -14,7 +16,7 @@ namespace API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
+            services.AddScoped<ICustomerRepository, CustomerRepository>();
             services.AddControllers();
             services.AddDbContext<RetailStoreContext>(x => x.UseSqlite(
                 _configuration.GetConnectionString("DefaultConnection")));

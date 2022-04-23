@@ -1,0 +1,28 @@
+[
+    {
+        "Name": "Employee",
+        "Definition": "Employee",
+        "DiscountDefinitionId" : 1,
+        "CreatedAt": "2022-04-23T12:00:00.714942+03:00"
+    },
+    {
+        "Name": "Affiliate",
+        "Definition": "Affiliate",
+        "DiscountDefinitionId" : 2,
+        "CreatedAt": "2022-04-23T12:00:00.714942+03:00"
+
+    },
+    {
+        "Name": "LoyalCustomer",
+        "Definition": "Two Years Customer",
+        "DiscountDefinitionId" : 3,
+        "CreatedAt": "2022-04-23T12:00:00.714942+03:00"
+
+    },
+    {
+        "Name": "Normal",
+        "Definition": "Normal Customers",
+        "DiscountDefinitionId" : 4,
+        "CreatedAt": "2022-04-23T12:00:00.714942+03:00"
+    }
+]

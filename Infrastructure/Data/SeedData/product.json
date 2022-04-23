@@ -1,0 +1,26 @@
+[
+    {
+        "Name" : "Product 1",
+        "Price": 20.00,
+        "ProductTypeId": 1,
+        "CreatedAt": "2022-04-23T12:00:00.714942+03:00"
+    },
+    {
+        "Name" : "Product 2",
+        "Price": 40.00,
+        "ProductTypeId": 2,
+        "CreatedAt": "2022-04-23T12:00:00.714942+03:00"
+    },
+    {
+        "Name" : "Product 3",
+        "Price": 30.00,
+        "ProductTypeId": 2,
+        "CreatedAt": "2022-04-23T12:00:00.714942+03:00"
+    },
+    {
+        "Name" : "Product 4",
+        "Price": 40.00,
+        "ProductTypeId": 2,
+        "CreatedAt": "2022-04-23T12:00:00.714942+03:00"
+    }
+]

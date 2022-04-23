@@ -1,0 +1,14 @@
+[
+    {
+        "Name": "Grocery 1",
+        "Definition": "Grocery products",
+        "Type": 1,
+        "CreatedAt": "2022-04-23T12:00:00.714942+03:00"
+    },
+    {
+        "Name": "Other Products",
+        "Definition": "The products excepts groceries",
+        "Type": 2,
+        "CreatedAt": "2022-04-23T12:00:00.714942+03:00"
+    }
+]

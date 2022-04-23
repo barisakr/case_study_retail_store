@@ -1,0 +1,30 @@
+[
+    { 
+        "Name" : "Employee Discount",
+        "DiscountType": 1,
+        "IsRatio": true,
+        "Ratio": 30,
+        "CreatedAt": "2022-04-23T12:00:00.714942+03:00"
+    },
+    { 
+        "Name" : "Affiliate Discount",
+        "DiscountType": 2,
+        "IsRatio": true,
+        "Ratio": 10,
+        "CreatedAt": "2022-04-23T12:00:00.714942+03:00"
+    },
+    { 
+        "Name" : "Two Years Customer",
+        "DiscountType": 3,
+        "IsRatio": true,
+        "Ratio": 5,
+        "CreatedAt": "2022-04-23T12:00:00.714942+03:00"
+    },
+    { 
+        "Name" : "Price Discount",
+        "DiscountType": 4,
+        "IsRatio": false,
+        "Ratio": 5,
+        "CreatedAt": "2022-04-23T12:00:00.714942+03:00"
+    }
+]
