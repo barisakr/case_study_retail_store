@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Api.Controllers
 {
-    [Route("api/[controller]")]
-    public class CustomerController : Controller
+   
+    public class CustomerController : BaseApiController
     {
         private readonly IGenericRepository<Customer> _repository;
         private readonly IMapper _mapper;
