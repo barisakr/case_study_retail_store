@@ -10,7 +10,7 @@ namespace Infrastructure.Data.Repositories
         public CustomerRepository(RetailStoreContext context)
         {
             _context = context;
-            
+
         }
         public async Task<Customer> GetCustomerByIdAsync(int id)
         {
@@ -21,7 +21,7 @@ namespace Infrastructure.Data.Repositories
         {
             return await _context.Customers
                 .Include(x => x.CustomerType)
-            .ToListAsync();
+                .ToListAsync();
         }
     }
 }

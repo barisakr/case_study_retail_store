@@ -1,3 +1,4 @@
+using Api.Helpers;
 using Domain.RepositoryInterfaces;
 using Infrastructure.Data;
 using Infrastructure.Data.Repositories;
@@ -11,12 +12,14 @@ namespace API
         private readonly IConfiguration _configuration;
         public Startup(IConfiguration configuration)
         {
-            _configuration = configuration; 
+            _configuration = configuration;
         }
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddAutoMapper(typeof(MappingProfile));
             services.AddScoped<ICustomerRepository, CustomerRepository>();
+            services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
             services.AddControllers();
             services.AddDbContext<RetailStoreContext>(x => x.UseSqlite(
                 _configuration.GetConnectionString("DefaultConnection")));

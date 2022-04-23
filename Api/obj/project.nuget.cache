@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "jBH0pKCMkuQyO9SqJ0QrZJRFLrwD1QmcjkYKiySFcsxZdsXb5u45MB9o26ezhEnS0IxER0TpxNv6izvwFGVWoQ==",
+  "dgSpecHash": "235wZvjZR7yCdEfUMydsNLHkcpcGJwZUzaYRsHf1UeU1zdKanDKKX2pCaSmftlJG6PkihmZL9V9paziq4IpQGQ==",
   "success": true,
   "projectFilePath": "/Users/barisakar/Desktop/Cases/cs_retail_store/Api/Api.csproj",
   "expectedPackageFiles": [
+    "/Users/barisakar/.nuget/packages/automapper/11.0.0/automapper.11.0.0.nupkg.sha512",
+    "/Users/barisakar/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/11.0.0/automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
     "/Users/barisakar/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
+    "/Users/barisakar/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
     "/Users/barisakar/.nuget/packages/microsoft.data.sqlite.core/6.0.3/microsoft.data.sqlite.core.6.0.3.nupkg.sha512",
     "/Users/barisakar/.nuget/packages/microsoft.entityframeworkcore/6.0.3/microsoft.entityframeworkcore.6.0.3.nupkg.sha512",
     "/Users/barisakar/.nuget/packages/microsoft.entityframeworkcore.abstractions/6.0.3/microsoft.entityframeworkcore.abstractions.6.0.3.nupkg.sha512",
