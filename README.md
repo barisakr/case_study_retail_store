@@ -2,7 +2,15 @@
 
 # About The Project
 
-This project is written in Visual Studio Code and created from CLI
+This project is written in Visual Studio Code and created from CLI.
+The project contains the following entities
+    #####Customer
+    #####CustomerType
+    #####DiscountDefinition
+    #####Product
+    #####ProductType
+    #####Invoice
+    #####InvoiceDetail
 
 ## Installation
 
