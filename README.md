@@ -15,6 +15,9 @@ The project contains the following entities
     Invoice
     InvoiceDetail
 
+After the `dotnet watch run` command `SQLite` database will created and all entities will migrate to database automaticly. 
+
+Records for `Customer`, `CustomerType`, `DiscountDefinition`, `Product` and `ProductType` will automaticly inserted to database.
 
 ## Installation
 
