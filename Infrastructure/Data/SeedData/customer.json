@@ -42,14 +42,14 @@
         "CreatedAt": "2022-04-23T12:00:00.714942+03:00"
     },
     {
-        "Name": "Customer 8",
+        "Name": "Customer 7",
         "CustomerTypeId": 1,
         "PhoneNumber": "+905554441232",
         "Email": "customer1@email.com",
         "CreatedAt": "2022-04-23T12:00:00.714942+03:00"
     },
     {
-        "Name": "Customer 9",
+        "Name": "Customer 8",
         "CustomerTypeId": 4,
         "PhoneNumber": "+905554441232",
         "Email": "customer1@email.com",
