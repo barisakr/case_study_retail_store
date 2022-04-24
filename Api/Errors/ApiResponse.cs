@@ -21,6 +21,9 @@ namespace Api.Errors
 
             switch (statusCode)
             {
+                case 204:
+                    message = "No Content";
+                    break;
                 case 400:
                     message = "Bad Request";
                     break;
@@ -30,7 +33,7 @@ namespace Api.Errors
                 case 500:
                     message = "Server Erro";
                     break;
-            } 
+            }
             return message;
         }
     }

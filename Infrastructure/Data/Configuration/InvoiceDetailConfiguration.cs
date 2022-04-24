@@ -10,8 +10,9 @@ namespace Infrastructure.Data.Configuration
         {
             builder.Property(x => x.Id).IsRequired();
             builder.Property(x => x.InvoiceId).IsRequired();
-            builder.Property(x => x.ProductId).IsRequired(); 
+            builder.Property(x => x.ProductId).IsRequired();
             builder.Property(x => x.Amount).HasColumnType("decimal(19,2)").IsRequired();
+            builder.Property(x => x.NetAmount).HasColumnType("decimal(19,2)").IsRequired();
             builder.Property(x => x.DiscountAmount).HasColumnType("decimal(19,2)").IsRequired();
             builder.Property(x => x.Quantity).IsRequired();
 

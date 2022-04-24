@@ -9,10 +9,11 @@ namespace Domain.RepositoryInterfaces
 {
     public interface IGenericRepository<T> where T : BaseEntity
     {
-        Task<T> GetByIdAsync(int id); 
-        Task<IReadOnlyList<T>> GetAllAsync(); 
-        Task<T> GetEntityWithSpecification(ISpecification<T> specification); 
+        Task<T> GetByIdAsync(int id);
+        Task<IReadOnlyList<T>> GetAllAsync();
+        Task<T> GetEntityWithSpecification(ISpecification<T> specification);
         Task<IReadOnlyList<T>> ListAllAsync(ISpecification<T> specification);
-        
+        Task<T> AddAsync(T entity);
+        Task AddRangeAsync(IEnumerable<T> entity);
     }
 }

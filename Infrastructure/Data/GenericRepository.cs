@@ -15,11 +15,11 @@ namespace Infrastructure.Data
         private readonly RetailStoreContext _context;
         public GenericRepository(RetailStoreContext context)
         {
-            _context = context; 
+            _context = context;
         }
         public async Task<IReadOnlyList<T>> GetAllAsync()
         {
-           return await _context.Set<T>().ToListAsync();
+            return await _context.Set<T>().ToListAsync();
         }
 
         public async Task<T> GetByIdAsync(int id)
@@ -40,6 +40,20 @@ namespace Infrastructure.Data
         public IQueryable<T> ApplySpecification(ISpecification<T> specification)
         {
             return SpecificationEvaluator<T>.ApplyQuery(_context.Set<T>().AsQueryable(), specification);
+        }
+
+        public async Task<T> AddAsync(T entity)
+        {
+            entity.CreatedAt = DateTime.Now;
+            await _context.Set<T>().AddAsync(entity);
+            await _context.SaveChangesAsync();
+            return entity;
+        }
+
+        public async Task AddRangeAsync(IEnumerable<T> entity)
+        {
+            await _context.Set<T>().AddRangeAsync(entity);
+            await _context.SaveChangesAsync();
         }
     }
 }

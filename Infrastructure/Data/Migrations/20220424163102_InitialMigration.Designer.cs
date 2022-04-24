@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infrastructure.Data.Migrations
 {
     [DbContext(typeof(RetailStoreContext))]
-    [Migration("20220423123120_InitialMigration")]
+    [Migration("20220424163102_InitialMigration")]
     partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -129,6 +129,12 @@ namespace Infrastructure.Data.Migrations
                     b.Property<decimal>("TotalDiscountAmount")
                         .HasColumnType("decimal(19,2)");
 
+                    b.Property<decimal>("TotalNetAmount")
+                        .HasColumnType("decimal(19,2)");
+
+                    b.Property<int>("TotalQuantity")
+                        .HasColumnType("INTEGER");
+
                     b.HasKey("Id");
 
                     b.HasIndex("CustomerId");
@@ -154,6 +160,12 @@ namespace Infrastructure.Data.Migrations
                     b.Property<int>("InvoiceId")
                         .HasColumnType("INTEGER");
 
+                    b.Property<int?>("InvoiceId1")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<decimal>("NetAmount")
+                        .HasColumnType("decimal(19,2)");
+
                     b.Property<int>("ProductId")
                         .HasColumnType("INTEGER");
 
@@ -163,6 +175,8 @@ namespace Infrastructure.Data.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("InvoiceId");
+
+                    b.HasIndex("InvoiceId1");
 
                     b.HasIndex("ProductId");
 
@@ -263,6 +277,10 @@ namespace Infrastructure.Data.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("Domain.Entities.Invoice", null)
+                        .WithMany("InvoiceDetails")
+                        .HasForeignKey("InvoiceId1");
+
                     b.HasOne("Domain.Entities.Product", "Product")
                         .WithMany()
                         .HasForeignKey("ProductId")
@@ -283,6 +301,11 @@ namespace Infrastructure.Data.Migrations
                         .IsRequired();
 
                     b.Navigation("ProductType");
+                });
+
+            modelBuilder.Entity("Domain.Entities.Invoice", b =>
+                {
+                    b.Navigation("InvoiceDetails");
                 });
 #pragma warning restore 612, 618
         }

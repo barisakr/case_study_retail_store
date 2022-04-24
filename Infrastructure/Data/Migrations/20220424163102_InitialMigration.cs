@@ -117,8 +117,10 @@ namespace Infrastructure.Data.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     CustomerId = table.Column<int>(type: "INTEGER", nullable: false),
                     InvoiceNumber = table.Column<string>(type: "TEXT", nullable: false),
+                    TotalQuantity = table.Column<int>(type: "INTEGER", nullable: false),
                     TotalAmount = table.Column<decimal>(type: "decimal(19,2)", nullable: false),
                     TotalDiscountAmount = table.Column<decimal>(type: "decimal(19,2)", nullable: false),
+                    TotalNetAmount = table.Column<decimal>(type: "decimal(19,2)", nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
@@ -143,6 +145,8 @@ namespace Infrastructure.Data.Migrations
                     Quantity = table.Column<int>(type: "INTEGER", nullable: false),
                     Amount = table.Column<decimal>(type: "decimal(19,2)", nullable: false),
                     DiscountAmount = table.Column<decimal>(type: "decimal(19,2)", nullable: false),
+                    NetAmount = table.Column<decimal>(type: "decimal(19,2)", nullable: false),
+                    InvoiceId1 = table.Column<int>(type: "INTEGER", nullable: true),
                     CreatedAt = table.Column<DateTime>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
@@ -154,6 +158,11 @@ namespace Infrastructure.Data.Migrations
                         principalTable: "Invoices",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_InvoiceDetails_Invoices_InvoiceId1",
+                        column: x => x.InvoiceId1,
+                        principalTable: "Invoices",
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_InvoiceDetails_Products_ProductId",
                         column: x => x.ProductId,
@@ -176,6 +185,11 @@ namespace Infrastructure.Data.Migrations
                 name: "IX_InvoiceDetails_InvoiceId",
                 table: "InvoiceDetails",
                 column: "InvoiceId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_InvoiceDetails_InvoiceId1",
+                table: "InvoiceDetails",
+                column: "InvoiceId1");
 
             migrationBuilder.CreateIndex(
                 name: "IX_InvoiceDetails_ProductId",

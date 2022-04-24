@@ -12,10 +12,11 @@ namespace Api.Controllers
     [Route("errors/{statusCode}")]
     public class ErrorController : BaseApiController
     {
+        [NonAction]
         public IActionResult Error(int statusCode)
         {
             return new ObjectResult(new ApiResponse(statusCode));
         }
-      
+
     }
 }
